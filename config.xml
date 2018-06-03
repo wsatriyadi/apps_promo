@@ -61,13 +61,14 @@
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="SplashScreenDelay" value="500"/>
 	<preference name="FadeSplashScreenDuration" value="1"/>
-	<preference name="android-minSdkVersion" value="16"/>
 	<preference name="BackupWebStorage" value="none"/>
 	<preference name="SplashScreen" value="screen"/>
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarStyle" value="lightcontent" />
 	<preference name="StatusBarBackgroundColor" value="#000000" />
 	<platform name="android">
+		<preference name="AndroidLaunchMode" value="singleTop"/>
+		<preference name="android-minSdkVersion" value="16"/>
 		<preference name="loadUrlTimeoutValue" value="20000" />
 		<preference name="ErrorUrl" value="file:///android_asset/www/retry.html" />
 		<preference name="LoadingDialog" value="Start...,Please wait..." />
