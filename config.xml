@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.serasoft.appspromo" version="1.0.2.180603" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.serasoft.appspromo" version="1.0.3Beta" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 	<name>Apps Promo</name>
 	<description>Aplikasi Promo Harian</description>
 	<author email="wsatriyadi@gmail.com" href="https://freeappsnow.me/">Wisnu Satriyadi</author>
@@ -60,7 +60,7 @@
 	<preference name="UIWebViewBounce" value="false"/>
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="SplashScreenDelay" value="500"/>
-	<preference name="FadeSplashScreenDuration" value="1"/>
+	<preference name="FadeSplashScreenDuration" value="3"/>
 	<preference name="android-minSdkVersion" value="16"/>
 	<preference name="BackupWebStorage" value="none"/>
 	<preference name="SplashScreen" value="screen"/>

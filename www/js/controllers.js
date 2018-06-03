@@ -918,7 +918,7 @@ $ionicConfig.backButton.text("");
 			data_aplikasi_gratiss = JSON.parse(get_aplikasi_gratiss);
 			$scope.data_aplikasi_gratiss =JSON.parse( get_aplikasi_gratiss);
 			$scope.aplikasi_gratiss = [];
-			for(lastPush = 0; lastPush < 10; lastPush++) {
+			for(lastPush = 0; lastPush < 50; lastPush++) {
 				if (angular.isObject(data_aplikasi_gratiss[lastPush])){
 					$scope.aplikasi_gratiss.push(data_aplikasi_gratiss[lastPush]);
 				};
@@ -950,7 +950,7 @@ $ionicConfig.backButton.text("");
 				// TODO: dashboardCtrl --|---------- set:localforage
 				localforage.setItem("data_aplikasi_gratiss_" + $scope.hashURL, JSON.stringify(data_aplikasi_gratiss));
 				$scope.aplikasi_gratiss = [];
-				for(lastPush = 0; lastPush < 10; lastPush++) {
+				for(lastPush = 0; lastPush < 50; lastPush++) {
 					if (angular.isObject(data_aplikasi_gratiss[lastPush])){
 						$scope.aplikasi_gratiss.push(data_aplikasi_gratiss[lastPush]);
 					};
@@ -974,7 +974,7 @@ $ionicConfig.backButton.text("");
 						localforage.setItem("data_aplikasi_gratiss_" + $scope.hashURL,JSON.stringify(data_aplikasi_gratiss));
 						controller_by_user();
 						$scope.aplikasi_gratiss = [];
-						for(lastPush = 0; lastPush < 10; lastPush++) {
+						for(lastPush = 0; lastPush < 50; lastPush++) {
 							if (angular.isObject(data_aplikasi_gratiss[lastPush])){
 								$scope.aplikasi_gratiss.push(data_aplikasi_gratiss[lastPush]);
 							};
@@ -1032,7 +1032,7 @@ $ionicConfig.backButton.text("");
 			// TODO: dashboardCtrl --|---------- set:localforage
 			localforage.setItem("data_aplikasi_gratiss_" + $scope.hashURL,JSON.stringify(data_aplikasi_gratiss));
 			$scope.aplikasi_gratiss = [];
-			for(lastPush = 0; lastPush < 10; lastPush++) {
+			for(lastPush = 0; lastPush < 50; lastPush++) {
 				if (angular.isObject(data_aplikasi_gratiss[lastPush])){
 					$scope.aplikasi_gratiss.push(data_aplikasi_gratiss[lastPush]);
 				};
@@ -1057,7 +1057,7 @@ $ionicConfig.backButton.text("");
 					// TODO: dashboardCtrl --|---------- set:localforage
 					localforage.setItem("data_aplikasi_gratiss_"+ $scope.hashURL,JSON.stringify(data_aplikasi_gratiss));
 					$scope.aplikasi_gratiss = [];
-					for(lastPush = 0; lastPush < 10; lastPush++) {
+					for(lastPush = 0; lastPush < 50; lastPush++) {
 						if (angular.isObject(data_aplikasi_gratiss[lastPush])){
 							$scope.aplikasi_gratiss.push(data_aplikasi_gratiss[lastPush]);
 						};
@@ -1109,6 +1109,7 @@ $ionicConfig.backButton.text("");
 	
 	// create animation fade slide in right (ionic-material)
 	$scope.fireEvent = function(){
+		ionicMaterialMotion.fadeSlideInRight();
 		ionicMaterialInk.displayEffect();
 	};
 	// TODO: dashboardCtrl --|-- $scope.showAuthentication

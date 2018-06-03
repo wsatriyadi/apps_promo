@@ -1,7 +1,8 @@
 	<ion-view view-title=" Apps Promo" hide-nav-bar="false" >
 		<!-- content -->
 		<ion-content delegate-handle="top"   id="page-dashboard" class=" page-dashboard">
-					<!-- code refresh -->
+		
+			<!-- code refresh -->
 			<ion-refresher pulling-text="{{ 'Tarik untuk refresh' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
 			<!-- ./code refresh -->
 			
@@ -17,8 +18,8 @@
 
 
 			<!-- code listing -->
-			<div class="list animate-none">
-				<div class="item-thumbnail-3 card" ng-repeat="item in aplikasi_gratiss | filter:filter_aplikasi_gratiss as results" ng-init="$last ? fireEvent() : null">
+			<div class="list animate-fade-slide-in-right">
+				<div class="item-thumbnail-3 card" ng-repeat="item in data_aplikasi_gratiss | filter:filter_aplikasi_gratiss | limitTo:50:0 as results">
 				<a class="item item-colorful item-thumbnail-left "  href="#/apps_promo/aplikasi_gratis_singles/{{item.id}}">
 					<img alt="" class="full-image" ng-src="{{item.thumbnail}}" />
 					<h3 class=""  ng-bind-html="item.title | to_trusted"></h3>
@@ -28,13 +29,6 @@
 				</div>
 			</div>
 			<!-- ./code listing -->
-
-
-			<!-- code infinite scroll -->
-			<ion-list class="list">
-				<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
-			</ion-list>
-			<!-- ./code infinite scroll -->
 
 
 			<!-- code search result not found -->

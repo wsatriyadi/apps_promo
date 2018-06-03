@@ -3,7 +3,7 @@ angular.module("apps_promo", ["ngCordova","ionic","ionMdInput","ionic-material",
 
 		$rootScope.appName = "Apps Promo" ;
 		$rootScope.appLogo = "data/images/header/mylogo.png" ;
-		$rootScope.appVersion = "1.0.2" ;
+		$rootScope.appVersion = "1.0.3Beta" ;
 		$rootScope.headerShrink = false ;
 
 		$ionicPlatform.ready(function() {
