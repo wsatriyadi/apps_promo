@@ -69,6 +69,7 @@
 	<platform name="android">
 		<preference name="AndroidLaunchMode" value="singleTop"/>
 		<preference name="android-minSdkVersion" value="15"/>
+		<preference name="android-targetSdkVersion" value="26"/>
 		<preference name="loadUrlTimeoutValue" value="20000" />
 		<preference name="ErrorUrl" value="file:///android_asset/www/retry.html" />
 		<preference name="LoadingDialog" value="Start...,Please wait..." />
