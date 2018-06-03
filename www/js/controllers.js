@@ -1109,7 +1109,6 @@ $ionicConfig.backButton.text("");
 	
 	// create animation fade slide in right (ionic-material)
 	$scope.fireEvent = function(){
-		ionicMaterialMotion.fadeSlideInRight();
 		ionicMaterialInk.displayEffect();
 	};
 	// TODO: dashboardCtrl --|-- $scope.showAuthentication
