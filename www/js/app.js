@@ -31,34 +31,37 @@ angular.module("apps_promo", ["ngCordova","ionic","ionMdInput","ionic-material",
 				StatusBar.styleDefault();
 			}
 			// this will create a banner on startup
-			//required: cordova plugin add cordova-plugin-admob-free --save
-			if (typeof admob !== "undefined"){
+			//required: cordova plugin add cordova-plugin-admobpro --save
+			if (typeof AdMob !== "undefined"){
 				var admobid = {};
 				admobid = {
 					banner: "ca-app-pub-9424912518456288/9975508313",
 					interstitial: "ca-app-pub-9424912518456288/9919667996",
 					rewardvideo: ""
 				};
-				// banner
-				admob.banner.config({
-					id: admobid.banner,
-				});
-				admob.banner.prepare();
 				$timeout(function(){
-					admob.banner.show();
-				},1000); 
-				// interstitial
-				admob.interstitial.config({
-					id: admobid.interstitial,
-				});
-				admob.interstitial.prepare();
+					
+					AdMob.createBanner({
+						adId: admobid.banner,
+						isTesting: true,// TODO: remove this line when release
+						overlap: false,
+						autoShow: true,
+						offsetTopBar: false,
+						position: AdMob.AD_POSITION.TOP_CENTER,
+						bgColor: "black"
+					});
+					
+					AdMob.prepareInterstitial({
+						adId: admobid.interstitial,
+						autoShow: true,
+						isTesting: true,// TODO: remove this line when release
+					});
+					
+				}, 1000);
+			
+			
 				$timeout(function(){
-					admob.interstitial.show();
-				},1000); 
-				// rewardvideo
-				admob.rewardvideo.config({
-					id: admobid.rewardvideo,
-				});
+				}, 30000);
 			}
 
 
