@@ -1,0 +1,24 @@
+	<ion-view view-title=" FAQs" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-faqs" class=" page-faqs">
+		<ion-list class="card list">
+	<div>
+		<ion-item class="item item-colorful noborder" ng-click="toggleGroup(0)" ng-class="{active: isGroupShown(0)}" ><i class="icon" ng-class="isGroupShown(0) ? 'ion-minus' : 'ion-plus'"></i> <span>Apakah ini legal?</span></ion-item>
+		<ion-item class="item item-text-wrap" ng-show="isGroupShown(0)">Ya. Semua yang dipaparkan disini legal, disini hanya menampilkan aplikasi yang sedang promo di playstore.</ion-item>
+	</div>
+	<div>
+		<ion-item class="item item-colorful noborder" ng-click="toggleGroup(1)" ng-class="{active: isGroupShown(1)}" ><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i> <span>Bisakah saya mengunduhnya?</span></ion-item>
+		<ion-item class="item item-text-wrap" ng-show="isGroupShown(1)">Tentu</ion-item>
+	</div>
+	<div>
+		<ion-item class="item item-colorful noborder" ng-click="toggleGroup(2)" ng-class="{active: isGroupShown(2)}" ><i class="icon" ng-class="isGroupShown(2) ? 'ion-minus' : 'ion-plus'"></i> <span>Nama pengembangnya Satriyadi Soft, tapi kenapa package name nya Sera Soft?</span></ion-item>
+		<ion-item class="item item-text-wrap" ng-show="isGroupShown(2)">Tadinya emang mau dibikin Sera Soft, trus dipikir-pikir mending Satriyadi Soft deh, sekalian eksis hahaha, trus males deh ngubah package namee nya, ribet soalnya musti setting firebase, onesignal, admob dll malesin deh</ion-item>
+	</div>
+	<div>
+		<ion-item class="item item-colorful noborder" ng-click="toggleGroup(3)" ng-class="{active: isGroupShown(3)}" ><i class="icon" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i> <span>Kenapa ada iklannya?</span></ion-item>
+		<ion-item class="item item-text-wrap" ng-show="isGroupShown(3)">Iklan itu pendapatanku loh, hahaha yah supaya tetap semangat ngembangin terus dan tetap berkarya</ion-item>
+	</div>
+</ion-list>
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
